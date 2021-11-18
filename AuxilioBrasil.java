@@ -10,14 +10,16 @@ public class AuxilioBrasil {
 		
 		Beneficiarios usuario = new Beneficiarios();
 		
-		System.out.println("Olá!!! Bem-Vindo ao programa Java Auxilia... \nAqui iremos descobrir se você cumpre com os requisitos para receber o Auxílio Brasil.");
+		System.out.println("Olá! Seja Bem-Vindo!!! \nAqui iremos descobrir se você"
+							+ " cumpre com os requisitos para receber o Auxílio Brasil.");
 		
-		System.out.println("\n*****************************************************************************************");
+		System.out.println("\n---------------------------------------------------------------------------------------");
 		
 		//Coletando dados cadastrais
 		String nome, cpf;
-		int idade;
+		int idade,i;
 		
+		System.out.println("Iniciando Cadastro...");
 		System.out.println("\nDigite o seu nome: ");
 		nome = ler.next();
 		usuario.setNome(nome);
@@ -28,8 +30,11 @@ public class AuxilioBrasil {
 		cpf = ler.next();
 		usuario.setCpf(cpf);
 		
+		System.out.println("\nCadastro finalizado... \nDigite [1] para continuar e [2] para sair: ");
+		i = ler.nextInt();
+		
+		while(i!=2){
 		//Bolsa Família
-		do {
 		int bolsaFamilia;
 		 System.out.println("Você já possui cadastro no Bolsa Família? \n[1] Sim \t[2]Não: ");
 		 bolsaFamilia = ler.nextInt();
@@ -87,7 +92,10 @@ public class AuxilioBrasil {
 				System.out.println("Você não cumpre com os requisitos. Não poderá receber o Auxílio Brasil.");
 				break;
 			}
-		  
-		}while(usuario.getBolsaFamilia() != 1 && usuario.getBolsaFamilia() != 2);  
+			  
+		} 
+		
+		System.out.println("\nPrograma encerrado.");
+		 
 	}
 }

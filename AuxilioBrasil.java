@@ -10,7 +10,7 @@ public class AuxilioBrasil {
 		
 		Beneficiarios usuario = new Beneficiarios();
 		
-		System.out.println("Olá! Seja Bem-Vindo!!! \nAqui iremos descobrir se você"
+		System.out.println("Olá! Seja Bem-Vinde!!! \nAqui iremos descobrir se você"
 							+ " cumpre com os requisitos para receber o Auxílio Brasil.");
 		
 		System.out.println("\n---------------------------------------------------------------------------------------");
@@ -30,22 +30,22 @@ public class AuxilioBrasil {
 		cpf = ler.next();
 		usuario.setCpf(cpf);
 		
-		System.out.println("\nCadastro finalizado... \nDigite [1] para continuar e [2] para sair: ");
+		System.out.println("\nCadastro concluído... \n\nSe você busca informações a respeito do Auxílio Brasil, digite [1] para continuar ou [2] para sair: ");
 		i = ler.nextInt();
 		
 		while(i!=2){
 		//Bolsa Família
 		int bolsaFamilia;
-		 System.out.println("Você já possui cadastro no Bolsa Família? \n[1] Sim \t[2]Não: ");
+		 System.out.println("Você já possui cadastro no Bolsa Família? \n[1] Sim \t[2]Não ");
 		 bolsaFamilia = ler.nextInt();
 		 usuario.setBolsaFamilia(bolsaFamilia);
 		 
 		 if(usuario.getBolsaFamilia() == 2) { 
 		 }
 		 else if(usuario.getBolsaFamilia() == 1) {
-			 System.out.println("Você cumpre com os requisitos!!! \nPara confirmar seu cadastro entre em contato com"
-					 + " o Atendimento Caixa ao cidadão, pelo telefone 111. \nPara mais informações acesse o"
-					 + " site www.gov.br/cidadania/auxilio-brasil");
+			 System.out.println("\nVocê cumpre com os requisitos!!! \nPara concluir a solicitação do Auxílio Brasil entre em contato com"
+					 + " o Atendimento Caixa ao cidadão, pelo telefone 111. \nTenha em mãos o seguintes documentos: CPF ou NIS e comprovante de residência."
+					 + "\nPara mais informações acesse o site www.gov.br/cidadania/auxilio-brasil");
 			 break;
 		 }
 		 
@@ -62,13 +62,16 @@ public class AuxilioBrasil {
 		 if(usuario.getRendaPerCapita() > 89 && usuario.getRendaPerCapita() < 178) {
 		 }
 		 else if(usuario.getRendaPerCapita() < 89) {
-			 System.out.println("Você cumpre com os requisitos!!! \nPara confirmar seu cadastro entre em contato com"
-					 + " o Atendimento Caixa ao cidadão, pelo telefone 111. \nPara mais informações acesse o"
-					 + " site www.gov.br/cidadania/auxilio-brasil");
+			 System.out.println("\nVocê cumpre com os requisitos!!! \nPara concluir a solicitação do Auxílio Brasil entre em contato com"
+					 + " o Atendimento Caixa ao cidadão, pelo telefone 111. \nTenha em mãos o seguintes documentos: CPF ou NIS e comprovante de residência."
+					 + "\nPara mais informações acesse o site www.gov.br/cidadania/auxilio-brasil");
 			 break;
 		 }
 		 else{
-			 System.out.println("Você possui renda maior que R$178, por isso não receber o Auxílio Brasil.");
+			 System.out.println("Você possui renda maior que R$178,00 per capita, por isso não poderá receber o Auxílio Brasil."
+			 		+ "\nEm caso de dúvidas entre em contato com o Atendimento Caixa ao cidadão, pelo telefone 111."
+			 		+ "\nTenha em mãos o seguintes documentos: CPF ou NIS e comprovante de residência."
+			 		+ "\nPara mais informações acesse o site www.gov.br/cidadania/auxilio-brasil");
 			 break;
 		 }
 		 
@@ -83,13 +86,16 @@ public class AuxilioBrasil {
 			usuario.setRequisitos(requisitos);
 			
 			if(usuario.getRequisitos() == 1) {
-				 System.out.println("Você cumpre com os requisitos!!! \nPara confirmar seu cadastro entre em contato com"
-						 + " o Atendimento Caixa ao cidadão, pelo telefone 111. \nPara mais informações acesse o"
-						 + " site www.gov.br/cidadania/auxilio-brasil");
+				 System.out.println("\nVocê cumpre com os requisitos!!! \nPara concluir a solicitação do Auxílio Brasil entre em contato com"
+						 + " o Atendimento Caixa ao cidadão, pelo telefone 111. \nTenha em mãos o seguintes documentos: CPF ou NIS e comprovante de residência."
+						 + "\nPara mais informações acesse o site www.gov.br/cidadania/auxilio-brasil");
 				break;
 			}
 			else {
-				System.out.println("Você não cumpre com os requisitos. Não poderá receber o Auxílio Brasil.");
+				 System.out.println("Você não cumpre com os requisitos, por isso não poderá receber o Auxílio Brasil."
+					 		+ "\nEm caso de dúvidas entre em contato com o Atendimento Caixa ao cidadão, pelo telefone 111."
+					 		+ "\nTenha em mãos o seguintes documentos: CPF ou NIS e comprovante de residência."
+					 		+ "\nPara mais informações acesse o site www.gov.br/cidadania/auxilio-brasil");
 				break;
 			}
 			  
